@@ -5,10 +5,10 @@ FROM ubuntu:14.04
 MAINTAINER Fred Prieur <https://github.com/fprieur/docker-casperjs>
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install build-essential chrpath libssl-dev libxft-dev
+RUN apt-get install build-essential chrpath libssl-dev libxft-dev -y
 
-RUN apt-get install libfreetype6 libfreetype6-dev
-RUN apt-get install libfontconfig1 libfontconfig1-dev
+RUN apt-get install libfreetype6 libfreetype6-dev -y
+RUN apt-get install libfontconfig1 libfontconfig1-dev -y
 
 # Install phantomjs
 

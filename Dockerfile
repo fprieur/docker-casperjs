@@ -19,7 +19,7 @@ RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x
 RUN mv phantomjs-1.9.7-linux-x86_64.tar.bz2 /usr/local/share/
          
 RUN cd /usr/local/share/
-RUN tar xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
+RUN tar xvjf /usr/local/share/xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
 RUN ln -sf phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
 RUN ln -sf phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 RUN ln -sf phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs

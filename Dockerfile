@@ -12,8 +12,8 @@ RUN apt-get install libfontconfig1 libfontconfig1-dev -y
 
 # Install phantomjs
 
-RUN cd /home
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+RUN cd /home/
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 /home/
 
 RUN mv /home/phantomjs-1.9.7-linux-x86_64.tar.bz2 /usr/local/share/
          

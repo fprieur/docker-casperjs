@@ -31,7 +31,7 @@ RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
 RUN unzip /home/master.zip
 RUN mv /home/casperjs-master /home/casperjs
 
-UN mv casperjs /usr/local/share/
+RUN mv casperjs /usr/local/share/
 
 RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
 RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs

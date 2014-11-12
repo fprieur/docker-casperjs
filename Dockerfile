@@ -26,7 +26,7 @@ RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/
 # Install casperjs
 
 RUN cd /home
-RUN wget https://github.com/n1k0/casperjs/archive/master.zip P /home
+RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
 
 RUN unzip /home/master.zip
 RUN mv /home/casperjs-master /home/casperjs

@@ -28,10 +28,10 @@ RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/
 RUN cd /home
 RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
 
-RUN unzip /home/master.zip
+RUN unzip /home/master.zip -d /home
 RUN mv /home/casperjs-master /home/casperjs
 
-RUN mv casperjs /usr/local/share/
+RUN mv /home/casperjs /usr/local/share/
 
 RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
 RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs

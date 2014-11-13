@@ -30,11 +30,11 @@ RUN git clone https://github.com/n1k0/casperjs.git
 #RUN cd casperjs
 #RUN ln -sf /home/bin/casperjs /usr/local/bin/casperjs
 
-RUN mv casperjs /usr/local/share/
+RUN mv casperjs /usr/local/share/casperjs-latest
          
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/bin/casperjs
+RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/share/casperjs
+RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/bin/casperjs
+RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/bin/casperjs
 
 #RUN cd /home
 #RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home

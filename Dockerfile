@@ -25,7 +25,7 @@ RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/
 
 # Install casperjs
 
-RUN git clone git://github.com/n1k0/casperjs.git
+RUN git clone https://github.com/n1k0/casperjs.git
 RUN cd casperjs
 RUN ln -sf `pwd`/bin/casperjs /usr/local/bin/casperjs
 

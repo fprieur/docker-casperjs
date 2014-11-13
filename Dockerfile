@@ -32,15 +32,3 @@ RUN mv /home/casperjs /usr/local/share/casperjs-latest
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/share/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/bin/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/bin/casperjs
-
-#RUN cd /home
-#RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
-
-#RUN unzip /home/master.zip -d /home
-#RUN mv /home/casperjs-master /home/casperjs
-
-#RUN mv /home/casperjs /usr/local/share/
-
-#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
-#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs
-#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/bin/casperjs

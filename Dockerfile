@@ -36,7 +36,7 @@ RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/share/casper
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/bin/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/bin/casperjs
 
-CMD ["/usr/bin/phantomjs"]
+CMD ["/usr/bin/casperjs"]
 
 #RUN cd /home
 #RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home

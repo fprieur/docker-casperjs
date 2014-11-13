@@ -12,7 +12,6 @@ RUN apt-get install libfontconfig1 libfontconfig1-dev -y
 
 # Install phantomjs
 
-RUN cd /home
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -P /home
 
 
@@ -25,18 +24,14 @@ RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/
 
 # Install casperjs
 
-RUN cd /home
+WORKDIR /home
 RUN git clone https://github.com/n1k0/casperjs.git
-#RUN cd casperjs
-#RUN ln -sf /home/bin/casperjs /usr/local/bin/casperjs
 
-RUN mv casperjs /usr/local/share/casperjs-latest
+RUN mv /home/casperjs /usr/local/share/casperjs-latest
          
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/share/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/bin/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/bin/casperjs
-
-CMD ["/usr/bin/casperjs"]
 
 #RUN cd /home
 #RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home

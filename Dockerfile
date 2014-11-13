@@ -5,12 +5,7 @@ FROM ubuntu:14.04
 MAINTAINER Fred Prieur <https://github.com/fprieur/docker-casperjs>
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip -y
-
-RUN apt-get purge -y python python-minimal python2.7-minimal
-
-RUN mkdir /usr/src/python
-WORKDIR /usr/src/python
+RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip python -y
 
 RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y

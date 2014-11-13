@@ -5,7 +5,7 @@ FROM ubuntu:14.04
 MAINTAINER Fred Prieur <https://github.com/fprieur/docker-casperjs>
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip python -y
+RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip python git -y
 
 RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
@@ -25,14 +25,18 @@ RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/
 
 # Install casperjs
 
-RUN cd /home
-RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
+RUN git clone git://github.com/n1k0/casperjs.git
+RUN cd casperjs
+RUN ln -sf `pwd`/bin/casperjs /usr/local/bin/casperjs
 
-RUN unzip /home/master.zip -d /home
-RUN mv /home/casperjs-master /home/casperjs
+#RUN cd /home
+#RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home
 
-RUN mv /home/casperjs /usr/local/share/
+#RUN unzip /home/master.zip -d /home
+#RUN mv /home/casperjs-master /home/casperjs
 
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs
-RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/bin/casperjs
+#RUN mv /home/casperjs /usr/local/share/
+
+#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
+#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs
+#RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/bin/casperjs

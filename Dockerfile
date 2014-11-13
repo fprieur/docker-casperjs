@@ -32,9 +32,9 @@ RUN git clone https://github.com/n1k0/casperjs.git
 
 RUN mv casperjs /usr/local/share/
          
-RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
-RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
-RUN ln -sf /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/share/casperjs
+RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/local/bin/casperjs
+RUN ln -sf /usr/local/share/casperjs/bin/casperjs /usr/bin/casperjs
 
 #RUN cd /home
 #RUN wget https://github.com/n1k0/casperjs/archive/master.zip -P /home

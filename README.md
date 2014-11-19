@@ -9,3 +9,7 @@ casperjs 1.1.0-beta3<br>
 docker run fprieur/docker-casperjs casperjs --version
 docker run -v `pwd`/casperjs-files:/home/casperjs-files fprieur/docker-casperjs casperjs /home/casperjs-files/sample.js
 </pre>
+<pre>
+## screenshot ##
+docker run -v `pwd`/casperjs-files:/home/casperjs-files fprieur/docker-casperjs casperjs test /home/casperjs-files/capture.js
+</pre>

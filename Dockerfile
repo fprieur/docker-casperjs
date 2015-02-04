@@ -11,8 +11,6 @@ RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
 
 
-ADD . /home
-
 # Install phantomjs
 
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -P /home
@@ -35,3 +33,6 @@ RUN mv /home/casperjs /usr/local/share/casperjs-latest
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/share/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/local/bin/casperjs
 RUN ln -sf /usr/local/share/casperjs-latest/bin/casperjs /usr/bin/casperjs
+
+# Default command
+CMD ["/usr/bin/casperjs"]

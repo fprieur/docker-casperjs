@@ -1,7 +1,7 @@
 # Casperjs 
 
 ubuntu 14.04<br>
-phantomjs 1.9.7<br>
+phantomjs 1.9.8<br>
 casperjs 1.1.0-beta3<br>
 
 ## Usage ##

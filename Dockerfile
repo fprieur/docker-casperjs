@@ -9,6 +9,7 @@ RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip pyt
 
 RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
+RUN apt-get wget -y
 
 
 # Install phantomjs

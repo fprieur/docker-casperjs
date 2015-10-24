@@ -1,4 +1,3 @@
-
 #  Docker version 1.0.1, build 990021a
 
 FROM ubuntu:14.04
@@ -9,14 +8,13 @@ RUN apt-get install build-essential chrpath wget libssl-dev libxft-dev unzip pyt
 
 RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
-RUN apt-get install wget -y
-
 
 # Install phantomjs
 
-RUN export PHANTOMJS_VERSION=1.9.8
+ENV PHANTOMJS_VERSION 1.9.8
 
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -P /home
+RUN echo https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -P /home
+RUN wget "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2" -P /home
 
 
 RUN tar xvjf /home/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2
